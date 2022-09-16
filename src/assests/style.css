@@ -1,0 +1,164 @@
+[contenteditable=true]:empty:before{
+    content: attr(placeholder);
+    color: gray;
+    display: block; /* For Firefox */
+}
+
+div[contenteditable=true] {
+    outline: 0;
+}
+
+::selection {
+    background: rgb(191, 228, 243);
+} 
+
+html, body, #app {
+    height: 100%;
+}
+
+.documents-container {
+    display: flex;
+    height: 100%;
+}
+
+.list-page {
+    background-color: rgb(247, 246, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 300px;
+}
+
+.list-page .document-list-header {
+    flex-basis: 20%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-page > .doc-list {
+    width: 86%;
+    margin: 10% auto;
+    overflow: hidden auto;
+    flex: 1;
+}
+
+.list-page .title-block {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.list-page .title-block:hover {
+    background-color:rgba(0, 0, 0, 0.05);
+}
+
+.list-page .title-block .link-block {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-page > .add-btn {
+    background-color: rgb(247, 246, 243);
+    border: 0;
+    border-top: 1px solid rgba(55, 53, 47, 0.1);
+    width: 100%;
+    padding: 20px 0;
+}
+
+.list-page > .add-btn:hover {
+    cursor: pointer;
+    background-color: rgba(55,53,47,0.08);
+}
+
+.active {
+    background-color: rgba(55, 53, 47, .3);
+}
+
+.list-page .title-block > div {
+    display: flex;
+}
+
+.list-page .title-block button {
+    background-color: rgb(247, 246, 243);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.list-page .title-block button:hover {
+    cursor: pointer;
+}
+
+.edit-page {
+    flex: 1;
+    z-index: 0;
+}
+
+.doc-list {
+    padding: 0 1rem;
+}
+
+.editor {
+    height: 100%;
+    overflow: auto;
+}
+
+.editor .page-header {
+    padding: 1rem 0 1rem 1rem;
+}
+
+.editor .page-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.editor .page-header .title-block {
+    font-size: 2rem;
+    display: flex;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.editor .content-block b {
+    font-weight: bolder;
+}
+
+.editor .link-block {
+    text-decoration: underline;
+}
+
+.overlay-block {
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: rgb(247, 246, 243);
+    display: inline-flex;
+    padding: 10px;
+    gap: 10px;
+    z-index: 100;
+}
+
+.overlay-block > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 5px;
+}
+
+.overlay-block > div:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.link-block:hover {
+    cursor: pointer;
+}
+
+.content-block {
+    padding: 10px 0;
+}
